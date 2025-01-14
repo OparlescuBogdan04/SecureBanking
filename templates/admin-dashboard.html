@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- admin:qwerty1234 -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureBanking - Admin Dashboard</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <script src="../static/js/admin.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>SecureBanking</h1>
+    </header>
+    <nav>
+        <a href="main-dashboard.html">Main Dashboard</a>
+    </nav>
+
+    <main>
+        <h2>Welcome, Admin</h2>
+        <p>Here you can manage users, transactions, and tickets.</p>
+        <div class="actions">
+            <button id="viewUsersButton">View All Users</button>
+            <button id="viewTransactionsButton">View All Transactions</button>
+            <button id="viewRefundButton">Refund Transaction</button>
+            <button id="viewTicketsButton">Manage Tickets</button>
+        </div>
+
+        <!-- Users table will be displayed here -->
+        <div id="usersTableContainer" style="display:none;">
+            <h3>All Users</h3>
+            <table style="margin-bottom:200px" id="usersTable">
+                <thead>
+                    <tr>
+                        <th>User ID</th>
+                        <th>Name</th>
+                        <th>Role</th>
+                        <th>Balance</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- User rows will be inserted here -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Transactions table will be displayed here -->
+        <div id="transactionsTableContainer" style="display:none;">
+            <h3>All Transactions</h3>
+            <table style="margin-bottom:200px" id="transactionsTable">
+                <thead>
+                    <tr>
+                        <th>Transaction ID</th>
+                        <th>Sender</th>
+                        <th>Receiver</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                        <th>Timestamp</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Transaction rows will be inserted here -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Tickets table will be displayed here -->
+        <div id="ticketsTableContainer" style="display:none;">
+            <h3>All Tickets</h3>
+            <table style="margin-bottom:200px" id="ticketsTable">
+                <thead>
+                    <tr>
+                        <th>Ticket ID</th>
+                        <th>User ID</th>
+                        <th>Transaction ID</th>
+                        <th>Reason</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Ticket rows will be inserted here -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Refund Transaction Form -->
+        <div id="refundTransactionForm" style="display:none;">
+            <h3>Refund Transaction</h3>
+            <label for="transactionIdInput">Transaction ID:</label>
+            <input type="number" id="transactionIdInput" placeholder="Enter Transaction ID">
+            <button id="refundTransactionButton">Refund</button>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 SecureBanking. All rights reserved.</p>
+    </footer>
+</body>
+</html>

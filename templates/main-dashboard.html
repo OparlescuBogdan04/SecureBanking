@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureBanking - Main Dashboard</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>SecureBanking</h1>
+    </header>
+    <nav>
+        <a id="myDashboardLink" href="user-dashboard.html">My Dashboard</a>
+    </nav>
+
+    <main>
+        <h2>Transaction Records</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Transaction ID</th>
+                    <th>Sender (Hash)</th>
+                    <th>Receiver (Hash)</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for transaction in transactions %}
+                <tr>
+                    <td>{{ transaction.id }}</td>
+                    <td>{{ transaction.sender_h }}</td>
+                    <td>{{ transaction.receiver_h }}</td>
+                    <td>${{ transaction.amount }}</td>
+                    <td>{{ transaction.status }}</td>
+                    <td>{{ transaction.timestamp }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 SecureBanking. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

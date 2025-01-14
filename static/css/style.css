@@ -1,0 +1,66 @@
+/* Base Styles */
+ body {
+	 margin: 0;
+	 font-family: Arial, sans-serif;
+	 background-color: #101010;
+	 color: #f4f4f4;
+	 text-align: center;
+}
+ h1, h2 {
+	 margin-top: 20px;
+}
+ h1 {
+	 color: f4f4f4;
+}
+ a {
+	 color: f4f4f4;
+	 text-decoration: none;
+	 margin: 0 15px;
+}
+ a:hover {
+	 color: red;
+}
+/* Navbar */
+ nav {
+	 background-color: #333;
+	 padding: 15px;
+	 text-align: center;
+	 position: sticky;
+	 top: 0;
+	 z-index: 1000;
+}
+ nav a {
+	 color: white;
+	 text-decoration: none;
+	 margin: 0 15px;
+	 font-weight: bold;
+}
+ nav a:hover {
+	 color: red;
+}
+/* Main Table */
+ table {
+	 width: 80%;
+	 margin: 20px auto;
+	 border-collapse: collapse;
+	 box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+ table th, table td {
+	 padding: 15px;
+	 border: 1px solid #ddd;
+	 text-align: left;
+}
+ table th {
+	 background-color: #f4f4f4;
+	 color: black;
+}
+/* Footer */
+ footer {
+	 text-align: center;
+	 padding: 10px 0;
+	 background: #333;
+	 color: white;
+	 position: fixed;
+	 bottom: 0;
+	 width: 100%;
+}

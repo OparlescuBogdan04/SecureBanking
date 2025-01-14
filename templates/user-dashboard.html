@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureBanking - User Dashboard</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <script src="../static/js/transfer.js"></script>
+    <script src="../static/js/ticket.js"></script>
+    <script src="../static/js/withdraw.js"></script>
+    <script src="../static/js/user_data.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>SecureBanking</h1>
+    </header>
+    <nav>
+        <a href="main-dashboard.html">Main Dashboard</a>
+    </nav>
+
+    <main>
+        <h2>Welcome, <span id="username"></span></h2>
+        <p>Your Account Details:</p>
+        <ul style="list-style-type: none; padding-left: 0;">
+            <li>Name: <span id="usernameDisplay"></span></li>
+            <li>User ID: <span id="userIdDisplay"></span></li>
+            <li>Balance: $<span id="userBalanceDisplay"></span></li>
+        </ul>
+
+        <div class="actions">
+            <button onclick="transferMoney()">Transfer Money</button>
+            <button onclick="withdrawMoney()">Withdraw Money</button>
+            <button onclick="fileTicket()">File a Ticket</button>
+        </div>
+
+        <!-- Transfer Form -->
+        <div id="transferForm" style="display:none;">
+            <h3>Transfer Money</h3>
+            <br>
+            <label for="destinationId">Destination ID: </label>
+            <br>
+            <input type="text" id="destinationId" placeholder="Enter destination ID">
+            <br>
+            <label for="amountTransfer">Amount: </label>
+            <br>
+            <input type="number" id="amountTransfer" placeholder="Enter amount">
+            <br>
+            <button onclick="sendTransfer()">Send Transfer</button>
+        </div>
+
+        <!-- Withdraw Form -->
+        <div id="withdrawForm" style="display:none;">
+            <h3>Withdraw Money</h3>
+            <br>
+            <label for="amountWithdraw">Amount: </label>
+            <br>
+            <input type="number" id="amountWithdraw" placeholder="Enter amount">
+            <br>
+            <button onclick="sendWithdraw()">Withdraw</button>
+        </div>
+
+        <!-- Ticket Form -->
+        <div id="ticketForm" style="display:none;">
+            <h3>File a Ticket</h3>
+            <br>
+            <label for="ticketDescription">Description: </label>
+            <br>
+            <textarea id="ticketDescription" placeholder="Enter issue description"></textarea>
+            <br>
+
+            <label for="transactionId">Transaction ID (optional): </label>
+            <br>
+            <input type="text" id="transactionId" placeholder="Enter Transaction ID">
+            <br>
+
+            <button onclick="sendTicket()">Send Ticket</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 SecureBanking. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureBanking - Login</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <script src="../static/js/login.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>SecureBanking</h1>
+    </header>
+    <nav>
+        <a href="main-dashboard.html">Main Dashboard</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="loginUsername">Username:</label>
+                <input style="margin: 5px;" type="text" id="loginUsername" name="username" required>
+                <br>
+                <label for="loginPassword">Password:</label>
+                <input style="margin: 5px;" type="password" id="loginPassword" name="password" required>
+                <br>
+                <button type="button" onclick="handleLogin()">Login</button>
+            </form>
+        </section>
+
+        <br>
+        <br>
+        <br>
+
+        <section>
+            <h2>Register</h2>
+            <form id="registerForm">
+                <label for="registerUsername">Username:</label>
+                <input style="margin: 5px;"type="text" id="registerUsername" name="username" required>
+                <br>
+                <label for="registerPassword">Password:</label>
+                <input style="margin: 5px;" type="password" id="registerPassword" name="password" required>
+                <br>
+                <button type="button" onclick="handleRegister()">Register</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 SecureBanking. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
